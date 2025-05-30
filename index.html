@@ -11,10 +11,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/experience-fix.css" />
+		<link rel="stylesheet" href="assets/css/direct-fix.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Direct fix for experience text visibility */
+			.timeline-content { background-color: white !important; }
+			.timeline-content p, .timeline-content li { color: #000 !important; }
+			.timeline-content h3 { color: #4e54c8 !important; }
+			.timeline-content ul li { color: #000 !important; }
+			.timeline-content * { text-shadow: none !important; }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -97,7 +107,7 @@
 						</header>
 					
 					<!-- Experience Timeline -->
-					<section class="timeline-section">
+					<section class="timeline-section" style="display: block; visibility: visible; position: relative; z-index: 10;">
 						<h2 class="section-title">My <span class="accent-color">Experience</span></h2>
 						<div class="timeline">
 							<div class="timeline-item">
@@ -109,7 +119,7 @@
 									<p>France</p>
 									<ul class="experience-list">
 										<li>Validated research findings by retrieving and analyzing datasets from published research.</li>
-										<li>Developed and fine-tuned an open-source large language model (LLM), (LLaMA 3, Gemini), using both published and self-created datasets for threat analysis and improving threat actor attribution analysis of machine learning models.</li>
+										<li>Developed and fine-tuned an open-source large language model (LLM), (LLaMA 3,Gemini), using both published and selfcreated datasets. for threat analysis and improving threat actor attributionanalysis of machine learning models.</li>
 									</ul>
 								</div>
 							</div>
@@ -121,8 +131,8 @@
 									<p>Travel Agency</p>
 									<p>Tunisia</p>
 									<ul class="experience-list">
-										<li>Developed an interactive, customer-focused website using React, JavaScript, and PHP, increasing customer engagement by 25%. Optimized site performance, reducing load times by 40%.</li>
-										<li>Collaborated with the design team to ensure a responsive and user-friendly interface, improving overall engagement. Optimized site performance, ensuring faster loading times and seamless navigation.</li>
+										<li>Developed an interactive, customer-focused website using React, JavaScript, and PHP, increasing customer engagement by 25%. Optimized site performance, reducing load times by 40%</li>
+										<li>Collaborated with the design team to ensure a responsive and user-friendly interface, Improving overall engagement. Optimized site performance, ensuring faster loading times and seamless navigation</li>
 									</ul>
 								</div>
 							</div>
@@ -137,9 +147,7 @@
 							</div>
 						</div>
 					</section>
-								
-
-						
+				</article>
 						
 
 				<!-- Footer -->
@@ -202,6 +210,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 
 	</body>
 </html>

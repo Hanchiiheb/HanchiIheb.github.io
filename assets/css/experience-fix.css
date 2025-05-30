@@ -1,0 +1,44 @@
+/* Emergency fix for timeline text visibility */
+.timeline-content,
+.timeline-content p,
+.timeline-content li,
+.timeline-content h3,
+.experience-list li {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.timeline-content {
+  border: 1px solid #ddd !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.timeline-content h3 {
+  color: #4e54c8 !important; /* Keep headings in accent color */
+  border-bottom: 1px solid #eee !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Fix for timeline dot visibility */
+.timeline::after {
+  background: #4e54c8 !important;
+}
+
+.timeline-dot {
+  background: white !important;
+  border: 4px solid #4e54c8 !important;
+}
+
+/* Override any theme-specific styles */
+.timeline-item * {
+  font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+/* Increase contrast for date badges */
+.timeline-date {
+  background: #4e54c8 !important;
+  color: white !important;
+  font-weight: bold !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}

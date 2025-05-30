@@ -1,0 +1,28 @@
+/* Direct fix for experience section text visibility */
+body .timeline-content * {
+  color: #000000 !important;
+}
+
+body .timeline-content h3 {
+  color: #4e54c8 !important;
+}
+
+body .timeline-content {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #ddd !important;
+}
+
+body .timeline-content p,
+body .timeline-content li {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+body .experience-list li::before {
+  color: #4e54c8 !important;
+}
+
+/* Force override any other styles */
+.timeline * {
+  font-family: 'Poppins', Arial, sans-serif !important;
+}
