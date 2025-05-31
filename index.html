@@ -199,6 +199,11 @@
 							<li>Design: <a href="https://html5up.net">HTML5 UP</a>, enhanced by Iheb</li>
 						</ul>
 					</div>
+					
+					<!-- Scroll to top button for mobile -->
+					<a href="#" class="scroll-to-top" id="scrollToTop">
+						<i class="fa fa-arrow-up"></i>
+					</a>
 
 			</div>
 
@@ -210,6 +215,35 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Mobile enhancement scripts -->
+			<script>
+				// Scroll to top functionality
+				document.addEventListener('DOMContentLoaded', function() {
+					const scrollToTopBtn = document.getElementById('scrollToTop');
+					
+					// Show button when user scrolls down 300px
+					window.addEventListener('scroll', function() {
+						if (window.pageYOffset > 300) {
+							scrollToTopBtn.classList.add('visible');
+						} else {
+							scrollToTopBtn.classList.remove('visible');
+						}
+					});
+					
+					// Smooth scroll to top when button is clicked
+					scrollToTopBtn.addEventListener('click', function(e) {
+						e.preventDefault();
+						window.scrollTo({
+							top: 0,
+							behavior: 'smooth'
+						});
+					});
+					
+					// Improve mobile tap experience - remove 300ms delay
+					document.addEventListener('touchstart', function() {}, {passive: true});
+				});
+			</script>
 			<script src="assets/js/custom.js"></script>
 
 	</body>
