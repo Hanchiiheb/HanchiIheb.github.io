@@ -265,7 +265,58 @@
     };
     
     createScrollProgress();
-    
+
+    /* -------------------------------------------------- */
+    /* Experience view toggle + expand/collapse           */
+    /* -------------------------------------------------- */
+    (function initExperienceUI() {
+      const section = document.querySelector('.timeline-section');
+      const toggleContainer = document.querySelector('.view-toggle');
+      
+      // View toggle (Timeline <-> List)
+      if (section && toggleContainer) {
+        const buttons = toggleContainer.querySelectorAll('.toggle-btn');
+        const applyView = (view) => {
+          if (view === 'list') section.classList.add('list-view');
+          else section.classList.remove('list-view');
+          localStorage.setItem('experienceView', view);
+          buttons.forEach(btn => {
+            const isActive = btn.dataset.view === view;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-selected', String(isActive));
+          });
+        };
+        
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => applyView(btn.dataset.view));
+        });
+        
+        // Restore saved preference (default to list)
+        const saved = localStorage.getItem('experienceView');
+        applyView(saved || 'list');
+      }
+      
+      // Expand/collapse long bullet lists
+      const lists = document.querySelectorAll('.timeline-content .experience-list');
+      lists.forEach(list => {
+        const items = Array.from(list.children).filter(el => el.tagName.toLowerCase() === 'li');
+        if (items.length > 2 && !list.classList.contains('no-collapse')) {
+          list.classList.add('collapsed');
+          const btn = document.createElement('button');
+          btn.className = 'expand-btn';
+          btn.type = 'button';
+          btn.textContent = 'Show more';
+          btn.setAttribute('aria-expanded', 'false');
+          list.after(btn);
+          btn.addEventListener('click', () => {
+            const isCollapsed = list.classList.toggle('collapsed');
+            btn.textContent = isCollapsed ? 'Show more' : 'Show less';
+            btn.setAttribute('aria-expanded', String(!isCollapsed));
+          });
+        }
+      });
+    })();
+
     /* -------------------------------------------------- */
     /* Deprecate old scroll-to-top anchor if present      */
     /* -------------------------------------------------- */

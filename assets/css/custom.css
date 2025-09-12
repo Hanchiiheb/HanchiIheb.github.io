@@ -407,6 +407,119 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Experience view toggle */
+.experience-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(78, 84, 200, 0.3);
+}
+
+/* List view overrides */
+.timeline-section.list-view .timeline::after {
+  display: none;
+}
+
+.timeline-section.list-view .timeline-dot {
+  display: none;
+}
+
+.timeline-section.list-view .timeline-item {
+  padding: 0 0 1.5rem 0;
+}
+
+.timeline-section.list-view .timeline-content {
+  width: 100%;
+  left: 0 !important;
+  transform: none !important;
+}
+
+.timeline-section.list-view .timeline-item:nth-child(odd) .timeline-content,
+.timeline-section.list-view .timeline-item:nth-child(even) .timeline-content {
+  left: 0;
+}
+
+/* Show and restyle date in list view */
+.timeline-section.list-view .timeline-date {
+  display: inline-block;
+  position: static;
+  width: auto;
+  padding: 8px 10px;
+  background: linear-gradient(45deg, #4e54c8, #6366f1);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(78, 84, 200, 0.25);
+}
+
+/* Expand/collapse experience bullets */
+.experience-list.collapsed li:nth-child(n+3) {
+  display: none;
+}
+
+.expand-btn {
+  margin-top: 0.75rem;
+  background: transparent;
+  border: 1px solid #4e54c8;
+  color: #4e54c8;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+  background: #4e54c8;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(78, 84, 200, 0.25);
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 736px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .view-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Project Cards */
 .project-cards {
     display: grid;
