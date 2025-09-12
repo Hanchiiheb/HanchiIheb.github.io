@@ -159,7 +159,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   text-align: left;
   margin-bottom: 1rem;
-  opacity: 0.9;
+  color: var(--text-dark) !important;
+  opacity: 1;
+  line-height: 1.7;
 }
 
 .about-text p:last-child {
@@ -185,14 +187,20 @@ h1, h2, h3, h4, h5, h6 {
 .skill-name {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--text-dark) !important;
 }
 
 .skill-bar {
   height: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   overflow: hidden;
+}
+
+/* Preserve contrast in dark theme */
+[data-theme='dark'] .skill-bar {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .skill-level {
