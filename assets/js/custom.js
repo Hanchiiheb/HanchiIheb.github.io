@@ -3,15 +3,16 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
     /* -------------------------------------------------- */
-    /* Sticky glass-morph navigation                      */
+    /* Sticky glass-morph navigation - DISABLED          */
     /* -------------------------------------------------- */
     const nav = document.getElementById('nav');
-    const stickyHandler = () => {
-      if (window.scrollY > 80) nav.classList.add('sticky');
-      else nav.classList.remove('sticky');
-    };
-    stickyHandler();
-    window.addEventListener('scroll', stickyHandler);
+    // Disable sticky behavior to keep nav always visible
+    // const stickyHandler = () => {
+    //   if (window.scrollY > 80) nav.classList.add('sticky');
+    //   else nav.classList.remove('sticky');
+    // };
+    // stickyHandler();
+    // window.addEventListener('scroll', stickyHandler);
 
     /* -------------------------------------------------- */
     /* Light theme only - theme toggle removed           */

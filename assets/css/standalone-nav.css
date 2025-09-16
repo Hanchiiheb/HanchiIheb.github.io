@@ -1,0 +1,126 @@
+/* Standalone Navigation System - Independent CSS */
+.standalone-navigation {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 2rem !important;
+    margin: 0 !important;
+    border: none !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+}
+
+.standalone-navigation .nav-links {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 2rem !important;
+    align-items: center !important;
+}
+
+.standalone-navigation .nav-links li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.standalone-navigation .nav-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 1.5rem !important;
+    color: #1f2937 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+.standalone-navigation .nav-link:hover {
+    background: rgba(79, 70, 229, 0.1) !important;
+    color: #4f46e5 !important;
+    border-color: rgba(79, 70, 229, 0.2) !important;
+    transform: translateY(-1px) !important;
+}
+
+.standalone-navigation .nav-link.active {
+    background: #4f46e5 !important;
+    color: white !important;
+    border-color: #4f46e5 !important;
+}
+
+.standalone-navigation .nav-link i {
+    font-size: 1rem !important;
+    width: 16px !important;
+    text-align: center !important;
+}
+
+/* Hide the original navigation */
+#nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Adjust main content to account for fixed nav */
+#main {
+    margin-top: 80px !important;
+    padding-top: 20px !important;
+}
+
+#intro {
+    padding-top: 80px !important;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    .standalone-navigation {
+        padding: 0 1rem !important;
+        height: 55px !important;
+    }
+    
+    .standalone-navigation .nav-links {
+        gap: 1rem !important;
+    }
+    
+    .standalone-navigation .nav-link {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    #main {
+        margin-top: 75px !important;
+    }
+    
+    #intro {
+        padding-top: 75px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .standalone-navigation .nav-links {
+        gap: 0.5rem !important;
+    }
+    
+    .standalone-navigation .nav-link {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+}

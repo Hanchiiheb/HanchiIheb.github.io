@@ -124,7 +124,8 @@
 		$wrapper._parallax(0.925);
 
 	// Nav Panel.
-
+		// DISABLED: This logic moves the nav content to an off-screen panel and is not needed for the new design.
+		/*
 		// Toggle.
 			$navPanelToggle = $(
 				'<a href="#navPanel" id="navPanelToggle">Menu</a>'
@@ -195,8 +196,11 @@
 				&&	browser.osVersion < 10)
 					$navPanel
 						.css('transition', 'none');
+		*/
 
 	// Intro.
+		// DISABLED: This logic hides the intro section on scroll and interferes with the new navigation.
+		/*
 		var $intro = $('#intro');
 
 		if ($intro.length > 0) {
@@ -251,8 +255,9 @@
 						}
 					});
 
-			});
+				});
 
 		}
+		*/
 
 })(jQuery);

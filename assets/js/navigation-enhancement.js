@@ -7,58 +7,45 @@ document.addEventListener('DOMContentLoaded', function() {
     let minDelta = 15; // ignore micro scrolls to prevent flicker
     let lastToggleY = window.scrollY; // hysteresis to avoid rapid toggling
     
-    // Smart Navigation Hide/Show on Scroll
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        
-        if (!isScrolling) {
-            window.requestAnimationFrame(() => {
-                const delta = currentScrollY - lastScrollY;
-
-                // Hide navigation when scrolling down past threshold and significant delta
-                if (
-                    delta > minDelta &&
-                    currentScrollY > scrollThreshold &&
-                    currentScrollY - lastToggleY > 150
-                ) {
-                    nav.classList.add('nav-hidden');
-                    nav.classList.remove('nav-visible');
-                    lastToggleY = currentScrollY;
-                } 
-                // Show navigation when scrolling up with meaningful delta
-                else if (delta < -minDelta) {
-                    nav.classList.remove('nav-hidden');
-                    nav.classList.add('nav-visible');
-                    lastToggleY = currentScrollY;
-                }
-                
-                // Always show nav at the top
-                if (currentScrollY <= scrollThreshold) {
-                    nav.classList.remove('nav-hidden');
-                    nav.classList.add('nav-visible');
-                    lastToggleY = currentScrollY;
-                }
-
-                // Subtle shrink state when scrolled beyond threshold
-                if (currentScrollY > scrollThreshold + 40) {
-                    nav.classList.add('nav-scrolled');
-                } else {
-                    nav.classList.remove('nav-scrolled');
-                }
-                
-                lastScrollY = currentScrollY;
-                isScrolling = false;
-            });
-            isScrolling = true;
-        }
+    // Ensure nav is always visible
+    const ensureNavVisible = () => {
+        nav.classList.remove('nav-hidden');
+        nav.classList.add('nav-visible');
+        // Hard-enforce visibility against any theme overrides
+        nav.style.transform = 'none';
+        nav.style.opacity = '1';
+        nav.style.visibility = 'visible';
+        nav.style.display = 'flex';
     };
     
-    // Add scroll event listener with throttling
-    let scrollTimer;
-    window.addEventListener('scroll', () => {
-        if (scrollTimer) clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(handleScroll, 10);
+    // Set nav as visible immediately
+    ensureNavVisible();
+
+    // On some breakpoints, the theme moves nav content into #navPanel.
+    // Restore it back into #nav to keep links visible at all times.
+    const restoreNavContent = () => {
+        if (!nav) return;
+        const panelInner = document.querySelector('#navPanel > nav');
+        const hasLinks = nav.querySelector('.links');
+        const hasIcons = nav.querySelector('.icons');
+        if ((!hasLinks || hasLinks.children.length === 0 || !hasIcons) && panelInner) {
+            // Move everything back from the panel into #nav
+            const children = Array.from(panelInner.children);
+            children.forEach(child => nav.appendChild(child));
+        }
+    };
+
+    // Keep nav visible and content restored during scroll/resize/orientation changes
+    const keepNav = () => {
+        restoreNavContent();
+        ensureNavVisible();
+    };
+    keepNav();
+    ['scroll', 'resize', 'orientationchange'].forEach(evt => {
+        window.addEventListener(evt, keepNav, { passive: true });
     });
+    
+    // Disable original scroll hide/show logic
     
     // Create and update scroll progress bar
     const createScrollProgress = () => {
