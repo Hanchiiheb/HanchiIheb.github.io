@@ -1,0 +1,82 @@
+/* Light Theme Overrides - Vibrant & Professional */
+
+/* Tokens */
+[data-theme='light'] {
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --surface-subtle: #f3f4f6;
+  --text: #1f2937; /* slate-800 */
+  --muted: #64748b; /* slate-500 */
+  --accent: #4e54c8; /* indigo/violet */
+  --accent-2: #8f94fb; /* indigo light */
+  --accent-warm: #f97316; /* orange-500 */
+}
+
+/* Base */
+[data-theme='light'] body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Navigation */
+[data-theme='light'] #nav {
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 6px 24px rgba(2, 8, 23, 0.06) !important;
+}
+
+[data-theme='light'] #nav ul.links a {
+  color: var(--text) !important;
+}
+
+[data-theme='light'] #nav ul.links a:hover,
+[data-theme='light'] #nav ul.links .active a {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+  color: #fff !important;
+}
+
+[data-theme='light'] #nav ul.icons a { color: #475569 !important; }
+[data-theme='light'] #nav ul.icons a:hover { color: var(--accent-2) !important; }
+
+/* Sections */
+[data-theme='light'] .section-title { color: var(--text) !important; text-shadow: none !important; }
+[data-theme='light'] .section-intro p { color: var(--muted) !important; }
+
+/* About */
+[data-theme='light'] .about-section { background: var(--surface) !important; border-color: rgba(2, 8, 23, 0.06) !important; }
+[data-theme='light'] .about-section .about-text p { color: var(--muted) !important; }
+[data-theme='light'] .skills-container { background: var(--surface-subtle) !important; border-color: rgba(2, 8, 23, 0.06) !important; }
+[data-theme='light'] .skills-container h3 { color: var(--accent) !important; }
+[data-theme='light'] .skill-name { color: var(--text) !important; }
+[data-theme='light'] .skill-bar { background: rgba(2, 8, 23, 0.08) !important; }
+[data-theme='light'] .skill-level { background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important; }
+
+/* Certifications */
+[data-theme='light'] .certification-section h2,
+[data-theme='light'] .certification-section h3,
+[data-theme='light'] .certification-section p { color: var(--text) !important; }
+
+[data-theme='light'] .certification-card { background: var(--surface) !important; border-color: rgba(2, 8, 23, 0.06) !important; }
+[data-theme='light'] .cert-issuer { color: var(--accent) !important; }
+[data-theme='light'] .cert-date { color: #6b7280 !important; }
+[data-theme='light'] .cert-content p { color: var(--muted) !important; }
+[data-theme='light'] .cert-skills span { background: rgba(78, 84, 200, 0.1) !important; color: var(--text) !important; border-color: rgba(78, 84, 200, 0.2) !important; }
+
+/* Projects */
+[data-theme='light'] .projects-section h2,
+[data-theme='light'] .projects-section h3,
+[data-theme='light'] .projects-section p { color: var(--text) !important; }
+
+[data-theme='light'] .project-card { background: var(--surface) !important; border-color: rgba(2, 8, 23, 0.06) !important; }
+[data-theme='light'] .project-card p { color: var(--muted) !important; }
+[data-theme='light'] .tech-tags span { background: rgba(78, 84, 200, 0.12) !important; color: var(--text) !important; border-color: rgba(78, 84, 200, 0.25) !important; }
+
+/* Timeline */
+[data-theme='light'] .timeline-content { background: var(--surface) !important; color: var(--text) !important; }
+[data-theme='light'] .timeline-content p,
+[data-theme='light'] .timeline-content li { color: var(--text) !important; }
+
+/* Stats */
+[data-theme='light'] .stat-label { color: var(--muted) !important; }
+
+/* Footer */
+[data-theme='light'] .modern-footer { background: rgba(255, 255, 255, 0.6) !important; border-color: rgba(2, 8, 23, 0.06) !important; }

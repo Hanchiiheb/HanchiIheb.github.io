@@ -1,0 +1,211 @@
+/* Modern Navigation Fixes - Light Theme Only */
+
+/* Sticky Navigation with Smart Scroll Behavior */
+#nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 60px;
+  min-height: 56px;
+  padding: 0.75rem 3rem !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Hide on scroll down, show on scroll up */
+#nav.nav-hidden {
+  transform: translateY(-100%);
+}
+
+#nav.nav-visible {
+  transform: translateY(0);
+}
+
+/* Subtle shrink on scroll for better content focus */
+#nav.nav-scrolled {
+  padding: 0.5rem 2.5rem !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Enhanced navigation styling */
+#nav ul.links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#nav ul.links li {
+  margin: 0;
+}
+
+#nav ul.links a {
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #1f2937 !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border: none !important;
+  background: transparent;
+  min-height: 44px; /* larger tap target */
+  line-height: 1;
+}
+
+#nav ul.links a:hover,
+#nav ul.links .active a {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 84, 200, 0.3);
+}
+
+/* Also style the current page using aria-current for accessibility */
+#nav ul.links a[aria-current="page"] {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb) !important;
+  color: #ffffff !important;
+}
+
+#nav ul.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#nav ul.icons a {
+  color: #475569 !important;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+#nav ul.icons a:hover {
+  color: #4e54c8 !important;
+  transform: scale(1.1);
+}
+
+
+/* Compensate for fixed navigation */
+#main {
+  margin-top: 80px !important;
+  position: relative;
+}
+
+#intro {
+  padding-top: 60px;
+}
+
+/* Mobile responsive navigation */
+@media screen and (max-width: 736px) {
+  #nav {
+    max-height: 50px;
+    padding: 0.5rem 1rem !important;
+  }
+  
+  #nav ul.links {
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  #nav ul.links a {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.85rem;
+  }
+  
+  #nav ul.links .nav-icon {
+    display: none; /* Hide icons on mobile to save space */
+  }
+  
+  #nav ul.icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(20, 20, 30, 0.9);
+    padding: 0.75rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #main {
+    margin-top: 60px !important;
+  }
+
+  /* Mobile overlay menu when toggled */
+  #nav.mobile-open ul.links {
+    position: fixed;
+    top: 56px;
+    left: 12px;
+    right: 12px;
+    background: rgba(20, 20, 30, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  #nav.mobile-open ul.links a {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  z-index: 10001;
+  transition: width 0.1s ease;
+}
+
+/* Accessible focus treatment */
+#nav a:focus-visible,
+#nav button:focus-visible,
+.contact-cta:focus-visible {
+  outline: 2px solid #8f94fb;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Skip link (for keyboard users) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 8px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #111827;
+  color: #ffffff;
+  z-index: 10002;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

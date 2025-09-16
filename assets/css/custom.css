@@ -583,14 +583,14 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: -12px;
     right: 20px;
-    background: linear-gradient(135deg, #f96e0e, #ff3860);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #fff;
     padding: 0.4rem 1rem;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    box-shadow: 0 3px 10px rgba(249, 105, 14, 0.3);
+    box-shadow: 0 3px 10px rgba(78, 84, 200, 0.3);
 }
 
 .project-card header h2 {
@@ -606,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card header h2 a:hover {
-    color: #f96e0e;
+    color: #4e54c8;
 }
 
 .project-card .image.fit {
@@ -645,20 +645,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-actions .button.primary {
-    background: linear-gradient(135deg, #f96e0e, #ff3860);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #ffffff;
     border-radius: 4px;
     font-weight: 500;
     padding: 0.5rem 1.2rem;
     border: none;
-    box-shadow: 0 3px 8px rgba(249, 105, 14, 0.3);
+    box-shadow: 0 3px 8px rgba(78, 84, 200, 0.3);
     transition: all 0.3s ease;
 }
 
 .card-actions .button.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(249, 105, 14, 0.5);
-    background: linear-gradient(135deg, #ff3860, #f96e0e);
+    box-shadow: 0 5px 12px rgba(78, 84, 200, 0.5);
+    background: linear-gradient(135deg, #8f94fb, #4e54c8);
 }
 
 .project-links {
@@ -673,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-links a:hover {
-    color: #f96e0e;
+    color: #4e54c8;
     transform: scale(1.1);
 }
 
@@ -699,16 +699,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .filter-btn:hover {
-    background: rgba(249, 110, 14, 0.1);
-    color: #f96e0e;
-    border-color: rgba(249, 110, 14, 0.3);
+    background: rgba(78, 84, 200, 0.1);
+    color: #4e54c8;
+    border-color: rgba(78, 84, 200, 0.3);
 }
 
 .filter-btn.active {
-    background: linear-gradient(135deg, #f96e0e, #ff3860);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     color: #ffffff;
     border-color: transparent;
-    box-shadow: 0 3px 10px rgba(249, 105, 14, 0.3);
+    box-shadow: 0 3px 10px rgba(78, 84, 200, 0.3);
 }
 
 /* Animation Classes */
@@ -1278,7 +1278,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   height: 100%;
   width: 3px;
-  background: linear-gradient(to bottom, var(--accent-color), #ff3860);
+  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
   border-radius: 1rem;
   z-index: 0;
 }
@@ -1297,13 +1297,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-color), #ff3860);
-  box-shadow: 0 0 0 4px rgba(249, 110, 14, 0.2);
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  box-shadow: 0 0 0 4px rgba(78, 84, 200, 0.2);
   z-index: 2;
 }
 
 .timeline-date {
-  color: #f96e0e;
+  color: #4e54c8;
   font-weight: 600;
   margin-bottom: 0.75rem;
   font-size: 1rem;

@@ -14,29 +14,11 @@
     window.addEventListener('scroll', stickyHandler);
 
     /* -------------------------------------------------- */
-    /* Dark / Light theme toggle                          */
+    /* Light theme only - theme toggle removed           */
     /* -------------------------------------------------- */
-    const iconsList = nav.querySelector('ul.icons');
-    if (iconsList && !document.getElementById('themeSwitch')) {
-      const li = document.createElement('li');
-      li.innerHTML = '<a id="themeSwitch" class="icon solid fa-adjust" title="Toggle theme"></a>';
-      iconsList.appendChild(li);
-    }
-
-    const setTheme = (theme) => {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    };
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(storedTheme ? storedTheme : (prefersDark ? 'dark' : 'light'));
-
-    document.addEventListener('click', (e) => {
-      if (e.target.id === 'themeSwitch') {
-        const current = document.documentElement.getAttribute('data-theme');
-        setTheme(current === 'dark' ? 'light' : 'dark');
-      }
-    });
+  
+    // Set light theme permanently
+    document.documentElement.setAttribute('data-theme', 'light');
 
     /* -------------------------------------------------- */
     /* Back-to-top rocket button                           */

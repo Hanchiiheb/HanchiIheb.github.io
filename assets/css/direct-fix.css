@@ -1,8 +1,8 @@
-/* Direct emergency fixes for text visibility issues */
+/* Direct fixes for text visibility - Light theme only */
 
 /* About Me section text visibility */
 .about-text p {
-  color: #ffffff !important;
+  color: #64748b !important;
   text-shadow: none !important;
   background: none !important;
   opacity: 1 !important;
@@ -12,7 +12,7 @@
 /* Skills section text visibility */
 .skills-container h3,
 .skill-name {
-  color: #ffffff !important;
+  color: #1f2937 !important;
   text-shadow: none !important;
   opacity: 1 !important;
 }
@@ -35,7 +35,7 @@
 
 /* Stats container text */
 .stat-label {
-  color: #ffffff !important;
+  color: #64748b !important;
   opacity: 1 !important;
 }
 
@@ -44,7 +44,7 @@
 .about-section .about-text strong,
 .about-section h2,
 .about-section .section-title {
-  color: #ffffff !important;
+  color: #1f2937 !important;
   text-shadow: none !important;
   opacity: 1 !important;
   visibility: visible !important;
@@ -52,8 +52,8 @@
 
 /* Ensure proper contrast and visibility */
 .about-section {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
 /* Force override any other styles */

@@ -9,14 +9,21 @@
 		<title>Hanchi Iheb | Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/main.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/custom.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/experience-fix.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/direct-fix.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/navigation-fix.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/portfolio-enhancement.css?v=1.0.3" />
+		<link rel="stylesheet" href="assets/css/theme-light.css?v=1.0.3" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+
+		<a href="#main" class="skip-link">Skip to content</a>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -30,11 +37,11 @@
 					</header>
 
 				<!-- Nav -->
-					<nav id="nav" class="modern-nav">
+					<nav id="nav" class="modern-nav" role="navigation" aria-label="Primary">
 						<ul class="links">
 							<li><a href="index.html"><span class="nav-icon fa fa-home"></span>Home</a></li>
 							<li><a href="generic.html"><span class="nav-icon fa fa-certificate"></span>Certifications</a></li>
-							<li class="active"><a href="elements.html"><span class="nav-icon fa fa-project-diagram"></span>Projects</a></li>
+							<li class="active"><a href="elements.html" aria-current="page"><span class="nav-icon fa fa-project-diagram"></span>Projects</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://github.com/Hanchiiheb" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
@@ -52,10 +59,10 @@
 							</div>
 							
 							<div class="project-filter">
-								<button class="filter-btn active" data-filter="all">All</button>
-								<button class="filter-btn" data-filter="aws">AWS</button>
-								<button class="filter-btn" data-filter="data-science">Data Science</button>
-								<button class="filter-btn" data-filter="ai">AI/ML</button>
+								<button class="filter-btn active" data-filter="all"><i class="fa fa-th-large"></i> All</button>
+								<button class="filter-btn" data-filter="aws"><i class="fab fa-aws"></i> AWS</button>
+								<button class="filter-btn" data-filter="data-science"><i class="fa fa-chart-line"></i> Data Science</button>
+								<button class="filter-btn" data-filter="ai"><i class="fa fa-brain"></i> AI/ML</button>
 							</div>
 							
 							<section class="project-cards">
@@ -227,8 +234,8 @@
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/util.js?v=1.0.3"></script>
+			<script src="assets/js/main.js?v=1.0.3"></script>
 			
 			<!-- Project Filter Script -->
 			<script>
@@ -305,7 +312,8 @@
 			</script>
 
 			<!-- Load enhanced custom JS -->
-			<script src="assets/js/custom.js"></script>
+			<script src="assets/js/custom.js?v=1.0.3"></script>
+			<script src="assets/js/navigation-enhancement.js?v=1.0.3"></script>
 
 	</body>
 </html>
