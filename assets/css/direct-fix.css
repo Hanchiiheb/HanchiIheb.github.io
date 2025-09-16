@@ -1,25 +1,59 @@
-/* Direct fix for experience section text visibility */
-body .timeline-content * {
-  color: #000000 !important;
+/* Direct emergency fixes for text visibility issues */
+
+/* About Me section text visibility */
+.about-text p {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  background: none !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
 }
 
-body .timeline-content h3 {
+/* Skills section text visibility */
+.skills-container h3,
+.skill-name {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Timeline content fixes */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #333333 !important;
+}
+
+.timeline-content h3 {
   color: #4e54c8 !important;
 }
 
-body .timeline-content {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid #ddd !important;
-}
-
-body .timeline-content p,
-body .timeline-content li {
-  color: #000000 !important;
+.timeline-content p,
+.timeline-content li {
+  color: #333333 !important;
   text-shadow: none !important;
 }
 
-body .experience-list li::before {
-  color: #4e54c8 !important;
+/* Stats container text */
+.stat-label {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Additional About Me fixes for all potential conflicting styles */
+.about-section .about-text p,
+.about-section .about-text strong,
+.about-section h2,
+.about-section .section-title {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure proper contrast and visibility */
+.about-section {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Force override any other styles */

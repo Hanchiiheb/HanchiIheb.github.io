@@ -132,6 +132,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
 }
 
+/* Ensure About Me text visibility in all themes */
+.about-section .about-text p,
+.about-section .skills-container h3,
+.about-section .skill-name {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Dark theme compatibility */
+[data-theme="dark"] .about-text p,
+[data-theme="dark"] .skills-container h3,
+[data-theme="dark"] .skill-name {
+  color: #ffffff !important;
+}
+
+/* Light theme compatibility */
+[data-theme="light"] .about-text p,
+[data-theme="light"] .skills-container h3,
+[data-theme="light"] .skill-name {
+  color: #333333 !important;
+}
+
 .section-title {
   font-size: 2.5rem;
   text-align: center;
@@ -159,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   text-align: left;
   margin-bottom: 1rem;
-  color: var(--text-dark) !important;
+  color: #ffffff !important;
   opacity: 1;
   line-height: 1.7;
 }
@@ -188,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--text-dark) !important;
+  color: #ffffff !important;
 }
 
 .skill-bar {
