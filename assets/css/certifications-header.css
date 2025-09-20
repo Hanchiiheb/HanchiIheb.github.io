@@ -1,0 +1,118 @@
+/* Professional Certifications Header Enhancement */
+
+.certifications-header {
+    position: relative;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+}
+
+.certifications-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.certifications-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.certifications-header p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.certifications-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.certification-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.certification-badge i {
+    color: #4f46e5;
+}
+
+.certification-badge .count {
+    background: #4f46e5;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Divider element */
+div.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #dee2e6, transparent);
+    width: 60%;
+    margin: 1.5rem auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .certifications-header {
+        padding: 2rem 1rem;
+    }
+    
+    .certifications-header h1 {
+        font-size: 2rem;
+    }
+    
+    .certifications-header p {
+        font-size: 1rem;
+    }
+    
+    .certifications-meta {
+        gap: 1rem;
+    }
+    
+    .certification-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    div.divider {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certifications-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .certification-badge {
+        justify-content: center;
+    }
+}
