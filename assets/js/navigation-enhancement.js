@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const allLinks = document.querySelectorAll('#nav .links a');
         allLinks.forEach(a => a.removeAttribute('aria-current'));
         const candidates = [
-            { file: 'index.html', selector: 'a[href$="index.html"]' },
-            { file: 'generic.html', selector: 'a[href$="generic.html"]' },
-            { file: 'elements.html', selector: 'a[href$="elements.html"]' }
+            { file: 'index.html', selector: 'a[href$="/home"], a[href$="index.html"]' },
+            { file: 'generic.html', selector: 'a[href$="/certifications"], a[href$="generic.html"]' },
+            { file: 'elements.html', selector: 'a[href$="/projects"], a[href$="elements.html"]' }
         ];
         const match = candidates.find(c => c.file === path) || (path === '' ? candidates[0] : null);
         if (match) {

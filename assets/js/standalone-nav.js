@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const navHTML = `
             <nav id="standalone-nav" class="standalone-navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link ${window.location.pathname.includes('index.html') || window.location.pathname === '/' ? 'active' : ''}">
+                    <li><a href="/home" class="nav-link ${window.location.pathname.includes('/home') || window.location.pathname === '/' ? 'active' : ''}">
                         <i class="fa fa-home"></i> Home
                     </a></li>
-                    <li><a href="generic.html" class="nav-link ${window.location.pathname.includes('generic.html') ? 'active' : ''}">
+                    <li><a href="/certifications" class="nav-link ${window.location.pathname.includes('/certifications') ? 'active' : ''}">
                         <i class="fa fa-certificate"></i> Certifications
                     </a></li>
-                    <li><a href="elements.html" class="nav-link ${window.location.pathname.includes('elements.html') ? 'active' : ''}">
+                    <li><a href="/projects" class="nav-link ${window.location.pathname.includes('/projects') ? 'active' : ''}">
                         <i class="fa fa-project-diagram"></i> Projects
                     </a></li>
                 </ul>
