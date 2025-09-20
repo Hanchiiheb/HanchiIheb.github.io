@@ -381,7 +381,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 
-.experience-list li {
+.experience-list > li {
   position: relative;
   padding: 0.6rem 0 0.6rem 2rem;
   color: #444 !important;
@@ -393,18 +393,142 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s ease;
 }
 
-.experience-list li:hover {
+.experience-list > li:hover {
   background: rgba(78, 84, 200, 0.1);
   transform: translateX(5px);
 }
 
-.experience-list li::before {
+.experience-list > li::before {
   content: '→';
   position: absolute;
   left: 0.75rem;
   color: #4e54c8;
   font-size: 1rem;
   font-weight: bold;
+}
+
+/* Experience meta and nested role details */
+.experience-section .exp-meta {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.experience-section .role-details {
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+  list-style: disc;
+}
+
+.experience-section .role-details li {
+  background: transparent !important;
+  padding: 0.25rem 0 !important;
+  transform: none !important;
+  color: #555 !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.experience-section .role-details li::before {
+  display: none !important;
+}
+
+/* Experience section general styling */
+.experience-section {
+  padding: 2rem 0;
+}
+
+.experience-section strong {
+  color: #4e54c8;
+  font-size: 1.1rem;
+}
+
+.experience-section > ul > li {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+/* See More button styling */
+.see-more-btn {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.see-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(78, 84, 200, 0.3);
+}
+
+.see-more-btn.expanded {
+  background: linear-gradient(135deg, #8f94fb, #4e54c8);
+}
+
+/* Role summary styling */
+.role-summary p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.role-details-expandable {
+  margin-top: 1rem;
+}
+
+/* Footer centered styling */
+.centered-contact .contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  text-align: center;
+  min-width: 200px;
+}
+
+.contact-item h3 {
+  color: #8f94fb;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.contact-item p {
+  margin: 0;
+}
+
+.contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #8f94fb;
+}
+
+@media screen and (max-width: 736px) {
+  .centered-contact .contact-info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-item {
+    min-width: auto;
+  }
 }
 
 /* Media query for smaller screens */

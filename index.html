@@ -10,25 +10,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css?v=1.0.4" />
-		<link rel="stylesheet" href="assets/css/custom.css?v=1.0.5" />
-		<link rel="stylesheet" href="assets/css/experience-fix.css?v=1.0.4" />
+		<link rel="stylesheet" href="assets/css/custom.css?v=1.0.7" />
+		<link rel="stylesheet" href="assets/css/experience-fix.css?v=1.0.5" />
 		<link rel="stylesheet" href="assets/css/direct-fix.css?v=1.0.4" />
 		<link rel="stylesheet" href="assets/css/navigation-fix.css?v=1.0.4" />
-		<link rel="stylesheet" href="assets/css/portfolio-enhancement.css?v=1.0.4" />
+		<link rel="stylesheet" href="assets/css/portfolio-enhancement.css?v=1.0.5" />
 		<link rel="stylesheet" href="assets/css/theme-light.css?v=1.0.4" />
 		<link rel="stylesheet" href="assets/css/standalone-nav.css?v=1.0.4" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Direct fix for experience text visibility */
-			.timeline-content { background-color: white !important; }
-			.timeline-content p, .timeline-content li { color: #000 !important; }
-			.timeline-content h3 { color: #4e54c8 !important; }
-			.timeline-content ul li { color: #000 !important; }
-			.timeline-content * { text-shadow: none !important; }
-		</style>
 	</head>
 	<body class="is-preload">
 
@@ -112,109 +104,63 @@
 							</div>
 						</header>
 					
-					<!-- Experience Timeline -->
-					<section class="timeline-section" style="display: block; visibility: visible; position: relative; z-index: 10;">
-						<div class="experience-header">
-							<h2 class="section-title">My <span class="accent-color">Experience</span></h2>
-							<div class="view-toggle" role="tablist" aria-label="Experience View">
-								<button class="toggle-btn active" data-view="timeline" aria-selected="true" type="button">Timeline</button>
-								<button class="toggle-btn" data-view="list" aria-selected="false" type="button">List</button>
-							</div>
-						</div>
-						<div class="timeline">
-							<div class="timeline-item">
-								<div class="timeline-dot"></div>
-								<div class="timeline-date">02/2025 - 08/2025</div>
-								<div class="timeline-content">
-									<h3>AI Engineer Intern</h3>
-									<p>iObeva</p>
-									<p>Tunisia</p>
-									<ul class="experience-list">
-										<li>Contributed to architecting and deploying a sophisticated multi-agent AI platform to automate enterprise workflows and enhance decision-making, leveraging cutting-edge technologies and cloud-native infrastructure.</li>
-										<li>Collaborated on Multi-Agent AI System Development: Worked with the development team to design, integrate, and optimize 8+ specialized AI agents using the Mastra framework (TypeScript) for domain-specific tasks including sales lead briefing (GPT-4o), domain knowledge retrieval (Claude 3.5 Sonnet), CRM analysis, and lean methodology guidance.</li>
-										<li>Contributed to Agentic RAG & Tool Ecosystem: Assisted in implementing an advanced Retrieval-Augmented Generation (RAG) pipeline using PostgreSQL with PGVector for semantic search. Supported the creation of custom tools for external API integration (HubSpot, Salesforce, Jira) and web search capabilities, enabling agent autonomy with real-time data access.</li>
-										<li>Managed Cloud-Native Deployment on AWS EKS: Worked with containerized full-stack application deployment (Vue.js, Node.js, PostgreSQL) using Docker on AWS Elastic Kubernetes Service (EKS). Managed cluster operations and deployment monitoring through OpenLens, overseeing pod orchestration, resource allocation, and configuration management with Helm charts. Implemented Dapr for microservices communication and state management.</li>
-									</ul>
+					<!-- Experience (List Only) -->
+					<section class="experience-section">
+						<h2 class="section-title">My <span class="accent-color">Experience</span></h2>
+						<ul class="experience-list">
+							<li>
+								<strong>AI Engineer Intern — iObeya</strong>
+								<div class="exp-meta">02/2025 - 08/2025 • Tunisia</div>
+								<div class="role-summary">
+									<p>Contributed to architecting and deploying a sophisticated multi-agent AI platform to automate enterprise workflows and enhance decision-making.</p>
+									<div class="role-details-expandable" style="display: none;">
+										<ul class="role-details">
+											<li><strong>Multi-Agent AI System Development:</strong> Designed and optimized 8+ specialized AI agents using the Mastra framework (TypeScript). Implemented domain-specific tasks including sales lead briefing (GPT-4o), knowledge retrieval (Claude 3.5 Sonnet), and CRM analysis.</li>
+											<li><strong>Agentic RAG & Tool Ecosystem:</strong> Implemented advanced Retrieval-Augmented Generation pipeline using PostgreSQL with PGVector for semantic search. Created custom tools for external API integration (HubSpot, Salesforce, Jira).</li>
+											<li><strong>Cloud-Native Deployment:</strong> Managed containerized full-stack deployment on AWS EKS using Docker. Orchestrated pod management, resource allocation, and configuration with Helm charts and Dapr.</li>
+										</ul>
+									</div>
+									<button class="see-more-btn" onclick="toggleDetails(this)">See More</button>
 								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-dot"></div>
-								<div class="timeline-date">07/2024 - 09/2024</div>
-								<div class="timeline-content">
-									<h3>Machine Learning Engineer Intern</h3>
-									<p>APAIA TECHNOLOGY</p>
-									<p>France</p>
-									<ul class="experience-list">
-										<li>Validated research findings by retrieving and analyzing datasets from published research.</li>
-										<li>Developed and fine-tuned an open-source large language model (LLM), (LLaMA 3,Gemini), using both published and selfcreated datasets. for threat analysis and improving threat actor attributionanalysis of machine learning models.</li>
-									</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-dot"></div>
-								<div class="timeline-date">07/2023 - 08/2023</div>
-								<div class="timeline-content">
-									<h3>Web Developer Intern</h3>
-									<p>Travel Agency</p>
-									<p>Tunisia</p>
-									<ul class="experience-list">
-										<li>Developed an interactive, customer-focused website using React, JavaScript, and PHP, increasing customer engagement by 25%. Optimized site performance, reducing load times by 40%</li>
-										<li>Collaborated with the design team to ensure a responsive and user-friendly interface, Improving overall engagement. Optimized site performance, ensuring faster loading times and seamless navigation</li>
-									</ul>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-dot"></div>
-								<div class="timeline-date">2022 - 2025</div>
-								<div class="timeline-content">
-									<h3>Data Science & Engineering Student</h3>
-									<p>Tek-up University</p>
-									<p>Specializing in advanced machine learning, cloud computing, and data engineering. Focused on building real-world applications and solutions that leverage cutting-edge AI technologies.</p>
-								</div>
-							</div>
-						</div>
+							</li>
+							<li>
+								<strong>Machine Learning Engineer Intern — APAIA TECHNOLOGY</strong>
+								<div class="exp-meta">07/2024 - 09/2024 • France</div>
+								<ul class="role-details">
+									<li><strong>Research Validation:</strong> Retrieved and analyzed datasets from published research to validate findings and methodologies.</li>
+									<li><strong>LLM Development:</strong> Developed and fine-tuned open-source large language models (LLaMA 3, Gemini) using published and custom datasets for threat analysis and attribution.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Web Developer Intern — Travel Agency</strong>
+								<div class="exp-meta">07/2023 - 08/2023 • Tunisia</div>
+								<ul class="role-details">
+									<li><strong>Frontend Development:</strong> Built interactive website using React, JavaScript, and PHP. Achieved 25% increase in customer engagement.</li>
+									<li><strong>Performance Optimization:</strong> Reduced site load times by 40% through code optimization and responsive design implementation.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Data Science & Engineering Student — Tek-up University</strong>
+								<div class="exp-meta">2022 - 2025</div>
+								<p>Specializing in advanced machine learning, cloud computing, and data engineering. Focused on building real-world applications and solutions that leverage cutting-edge AI technologies.</p>
+							</li>
+						</ul>
 					</section>
 				</article>
 						
 
 				<!-- Footer -->
 					<footer id="footer" class="modern-footer">
-						<div class="footer-content">
-							<section class="split contact">
-								<section class="alt">
-									<h3><i class="fa fa-map-marker-alt"></i> Location</h3>
-									<p>Tunisia, Manouba 2086</p>
-								</section>
-								<section>
+						<div class="footer-content centered-contact">
+							<section class="contact-info">
+								<div class="contact-item">
 									<h3><i class="fa fa-phone"></i> Phone</h3>
 									<p><a href="tel:+21622236252">(+216) 22236252</a></p>
-								</section>
-								<section>
+								</div>
+								<div class="contact-item">
 									<h3><i class="fa fa-envelope"></i> Email</h3>
 									<p><a href="mailto:hanchi.iheb@tek_up.de">hanchi.iheb@tek_up.de</a></p>
-								</section>
-							</section>
-							<section class="contact-form">
-								<h3>Get In Touch</h3>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="3"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-									</ul>
-								</form>
+								</div>
 							</section>
 						</div>
 					</footer>
@@ -270,6 +216,20 @@
 					// Improve mobile tap experience - remove 300ms delay
 					document.addEventListener('touchstart', function() {}, {passive: true});
 				});
+				
+				// Toggle details functionality for experience section
+				function toggleDetails(button) {
+					const expandableContent = button.parentNode.querySelector('.role-details-expandable');
+					if (expandableContent.style.display === 'none') {
+						expandableContent.style.display = 'block';
+						button.textContent = 'See Less';
+						button.classList.add('expanded');
+					} else {
+						expandableContent.style.display = 'none';
+						button.textContent = 'See More';
+						button.classList.remove('expanded');
+					}
+				}
 			</script>
 			<script src="assets/js/custom.js?v=1.0.4"></script>
 			<script src="assets/js/navigation-enhancement.js?v=1.0.4"></script>

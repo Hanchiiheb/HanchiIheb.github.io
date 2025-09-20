@@ -1,9 +1,8 @@
-/* Emergency fix for timeline text visibility */
+/* Emergency fix for timeline text visibility (timeline only) */
 .timeline-content,
 .timeline-content p,
 .timeline-content li,
-.timeline-content h3,
-.experience-list li {
+.timeline-content h3 {
   color: #000000 !important;
   text-shadow: none !important;
   background-color: rgba(255, 255, 255, 0.8) !important;
