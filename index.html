@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css?v=1.0.4" />
-		<link rel="stylesheet" href="assets/css/custom.css?v=1.1.9" />
+		<link rel="stylesheet" href="assets/css/custom.css?v=1.2.1" />
 		<link rel="stylesheet" href="assets/css/experience-fix.css?v=1.0.5" />
 		<link rel="stylesheet" href="assets/css/direct-fix.css?v=1.0.4" />
 		<link rel="stylesheet" href="assets/css/navigation-fix.css?v=1.0.4" />
@@ -82,6 +82,13 @@
 							<li><a href="https://www.linkedin.com/in/iheb-hanchi-700b96242" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 						</ul>
 					</nav>
+
+				<!-- Floating Background Elements -->
+				<div class="floating-elements">
+					<div class="floating-circle"></div>
+					<div class="floating-circle"></div>
+					<div class="floating-circle"></div>
+				</div>
 
 				<!-- Main -->
 					<div id="main">
@@ -301,7 +308,56 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js?v=1.0.4"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<!-- Interactive Scroll Animations -->
+			<script>
+				// Intersection Observer for scroll animations
+				const observerOptions = {
+					threshold: 0.1,
+					rootMargin: '0px 0px -50px 0px'
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('in-view');
+							
+							// Animate experience cards
+							if (entry.target.classList.contains('experience-section-enhanced')) {
+								const cards = entry.target.querySelectorAll('.experience-card');
+								cards.forEach((card, index) => {
+									setTimeout(() => {
+										card.classList.add('animate');
+									}, index * 200);
+								});
+							}
+							
+							// Animate skills
+							if (entry.target.classList.contains('skills-section')) {
+								const categories = entry.target.querySelectorAll('.skill-category-minimal');
+								categories.forEach((category, index) => {
+									setTimeout(() => {
+										category.classList.add('animate');
+									}, index * 100);
+								});
+							}
+						}
+					});
+				}, observerOptions);
+
+				// Observe sections when DOM is loaded
+				document.addEventListener('DOMContentLoaded', () => {
+					const sections = document.querySelectorAll('.experience-section-enhanced, .skills-section');
+					sections.forEach(section => observer.observe(section));
+				});
+
+				// Subtle interactions only - no background color changes
+				window.addEventListener('scroll', () => {
+					// Keep animations but remove background color changes
+					// This ensures smooth scrolling without jarring color transitions
+				});
+			</script>
 			
 			<!-- Mobile enhancement scripts -->
 			<script>

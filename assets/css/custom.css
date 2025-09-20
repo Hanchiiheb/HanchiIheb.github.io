@@ -181,6 +181,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: justify;
 }
 
+/* Unified About Section Background */
+.about-section {
+  background: #f8fafc;
+  padding: 2rem 0;
+}
+
 .about-text p {
   font-size: 1.1rem;
   text-align: justify;
@@ -979,10 +985,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Professional Experience Section - 2025 Enhanced Design */
+/* Unified Scrolling Background Theme */
+body {
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+/* Unified Sections Background */
 .experience-section-enhanced {
   padding: 4rem 2rem;
-  background: #ffffff;
+  background: #f8fafc;
+  position: relative;
 }
 
 .experience-timeline {
@@ -1121,11 +1134,135 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Minimal Professional Skills Section - Monochrome Design */
+/* Unified Skills Section Background */
 .skills-section {
   padding: 4rem 2rem;
-  background: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  background: #f8fafc;
+  position: relative;
+}
+
+/* Smooth Scroll Reveal Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Experience Cards Animation */
+.experience-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.experience-card.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.experience-card:nth-child(even).animate {
+  animation: slideInFromRight 0.8s ease forwards;
+}
+
+.experience-card:nth-child(odd).animate {
+  animation: slideInFromLeft 0.8s ease forwards;
+}
+
+/* Skills Animation */
+.skill-category-minimal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.skill-category-minimal.animate {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.skill-category-minimal:nth-child(1).animate { animation-delay: 0.1s; }
+.skill-category-minimal:nth-child(2).animate { animation-delay: 0.2s; }
+.skill-category-minimal:nth-child(3).animate { animation-delay: 0.3s; }
+.skill-category-minimal:nth-child(4).animate { animation-delay: 0.4s; }
+.skill-category-minimal:nth-child(5).animate { animation-delay: 0.5s; }
+.skill-category-minimal:nth-child(6).animate { animation-delay: 0.6s; }
+
+/* Floating Background Elements */
+.floating-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.05));
+  animation: float 20s infinite linear;
+}
+
+.floating-circle:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: -5s;
+}
+
+.floating-circle:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 15%;
+  animation-delay: -15s;
+}
+
+.floating-circle:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  left: 70%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.6;
+  }
 }
 
 .skills-container-minimal {
