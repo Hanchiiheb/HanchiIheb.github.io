@@ -20,7 +20,7 @@
 		<meta name="keywords" content="Iheb Hanchi, Data Science, AI Engineer, Machine Learning, Cloud Architecture, AWS, Python">
 		<meta name="author" content="Iheb Hanchi">
 		<link rel="stylesheet" href="../assets/css/main.css?v=1.0.4" />
-		<link rel="stylesheet" href="../assets/css/custom.css?v=1.1.8" />
+		<link rel="stylesheet" href="../assets/css/custom.css?v=1.1.9" />
 		<link rel="stylesheet" href="../assets/css/experience-fix.css?v=1.0.5" />
 		<link rel="stylesheet" href="../assets/css/direct-fix.css?v=1.0.4" />
 		<link rel="stylesheet" href="../assets/css/navigation-fix.css?v=1.0.4" />
@@ -123,47 +123,88 @@
 							</div>
 						</header>
 					
-					<!-- Experience (List Only) -->
-					<section class="experience-section">
-						<h2 class="section-title">My <span class="accent-color">Experience</span></h2>
-						<ul class="experience-list">
-							<li>
-								<strong>AI Engineer Intern — iObeya</strong>
-								<div class="exp-meta">02/2025 - 08/2025 • Tunisia</div>
-								<div class="role-summary">
-									<p>Contributed to architecting and deploying a sophisticated multi-agent AI platform to automate enterprise workflows and enhance decision-making.</p>
-									<div class="role-details-expandable" style="display: none;">
-										<ul class="role-details">
-											<li><strong>Multi-Agent AI System Development:</strong> Designed and optimized 8+ specialized AI agents using the Mastra framework (TypeScript). Implemented domain-specific tasks including sales lead briefing (GPT-4o), knowledge retrieval (Claude 3.5 Sonnet), and CRM analysis.</li>
-											<li><strong>Agentic RAG & Tool Ecosystem:</strong> Implemented advanced Retrieval-Augmented Generation pipeline using PostgreSQL with PGVector for semantic search. Created custom tools for external API integration (HubSpot, Salesforce, Jira).</li>
-											<li><strong>Cloud-Native Deployment:</strong> Managed containerized full-stack deployment on AWS EKS using Docker. Orchestrated pod management, resource allocation, and configuration with Helm charts and Dapr.</li>
-										</ul>
-									</div>
-									<button class="see-more-btn" onclick="toggleDetails(this)">See More</button>
+					<!-- Professional Experience -->
+					<section class="experience-section-enhanced">
+						<h2 class="section-title">Professional <span class="accent-color">Experience</span></h2>
+						<div class="experience-timeline">
+							<div class="experience-card">
+								<div class="exp-header">
+									<h3 class="exp-title">AI Engineer Intern</h3>
+									<div class="exp-company">iObeya</div>
+									<div class="exp-period">Feb 2025 - Aug 2025 • Tunisia</div>
 								</div>
-							</li>
-							<li>
-								<strong>Machine Learning Engineer Intern — APAIA TECHNOLOGY</strong>
-								<div class="exp-meta">07/2024 - 09/2024 • France</div>
-								<ul class="role-details">
-									<li><strong>Research Validation:</strong> Retrieved and analyzed datasets from published research to validate findings and methodologies.</li>
-									<li><strong>LLM Development:</strong> Developed and fine-tuned open-source large language models (LLaMA 3, Gemini) using published and custom datasets for threat analysis and attribution.</li>
-								</ul>
-							</li>
-							<li>
-								<strong>Web Developer Intern — Travel Agency</strong>
-								<div class="exp-meta">07/2023 - 08/2023 • Tunisia</div>
-								<ul class="role-details">
-									<li><strong>Frontend Development:</strong> Built interactive website using React, JavaScript, and PHP. Achieved 25% increase in customer engagement.</li>
-									<li><strong>Performance Optimization:</strong> Reduced site load times by 40% through code optimization and responsive design implementation.</li>
-								</ul>
-							</li>
-							<li>
-								<strong>Data Science & Engineering Student — Tek-up University</strong>
-								<div class="exp-meta">2022 - 2025</div>
-								<p>Specializing in advanced machine learning, cloud computing, and data engineering. Focused on building real-world applications and solutions that leverage cutting-edge AI technologies.</p>
-							</li>
-						</ul>
+								<div class="exp-content">
+									<p class="exp-summary">Architected and deployed sophisticated multi-agent AI platform to automate enterprise workflows and enhance decision-making processes.</p>
+									<div class="exp-achievements">
+										<div class="achievement-item">
+											<span class="achievement-label">Multi-Agent AI Systems</span>
+											<span class="achievement-desc">Designed 8+ specialized AI agents using Mastra framework (TypeScript)</span>
+										</div>
+										<div class="achievement-item">
+											<span class="achievement-label">Advanced RAG Implementation</span>
+											<span class="achievement-desc">Built retrieval pipelines with PostgreSQL & PGVector for semantic search</span>
+										</div>
+										<div class="achievement-item">
+											<span class="achievement-label">Cloud Deployment</span>
+											<span class="achievement-desc">Managed containerized deployment on AWS EKS with Docker & Helm</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="experience-card">
+								<div class="exp-header">
+									<h3 class="exp-title">Machine Learning Engineer Intern</h3>
+									<div class="exp-company">APAIA Technology</div>
+									<div class="exp-period">Jul 2024 - Sep 2024 • France</div>
+								</div>
+								<div class="exp-content">
+									<p class="exp-summary">Developed and fine-tuned large language models for advanced threat analysis and cybersecurity applications.</p>
+									<div class="exp-achievements">
+										<div class="achievement-item">
+											<span class="achievement-label">LLM Development</span>
+											<span class="achievement-desc">Fine-tuned LLaMA 3 & Gemini models for threat analysis</span>
+										</div>
+										<div class="achievement-item">
+											<span class="achievement-label">Research Validation</span>
+											<span class="achievement-desc">Analyzed datasets to validate research methodologies</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="experience-card">
+								<div class="exp-header">
+									<h3 class="exp-title">Web Developer Intern</h3>
+									<div class="exp-company">Travel Agency</div>
+									<div class="exp-period">Jul 2023 - Aug 2023 • Tunisia</div>
+								</div>
+								<div class="exp-content">
+									<p class="exp-summary">Built interactive web applications with significant performance improvements and user engagement increases.</p>
+									<div class="exp-achievements">
+										<div class="achievement-item">
+											<span class="achievement-label">Frontend Development</span>
+											<span class="achievement-desc">Built React/JavaScript applications with 25% engagement increase</span>
+										</div>
+										<div class="achievement-item">
+											<span class="achievement-label">Performance Optimization</span>
+											<span class="achievement-desc">Reduced site load times by 40% through optimization</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="experience-card education">
+								<div class="exp-header">
+									<h3 class="exp-title">Data Science & Engineering Student</h3>
+									<div class="exp-company">Tek-up University</div>
+									<div class="exp-period">2022 - 2025</div>
+								</div>
+								<div class="exp-content">
+									<p class="exp-summary">Specialized in advanced machine learning, cloud computing, and data engineering with focus on real-world AI applications.</p>
+								</div>
+							</div>
+						</div>
 					</section>
 
 					<!-- Technical Skills -->
